@@ -1,25 +1,43 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+const users = [
+  {
+    id: 1,
+    title: 'User 1',
+    isDone: false,
+    isImportant: false
+  },
+  {
+    id: 2,
+    title: 'User 2',
+    isDone: false,
+    isImportant: false
+  },
+  {
+    id: 3,
+    title: 'User 3',
+    isDone: false,
+    isImportant: false
+  }
+]
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h1>Menu</h1>
+        <ul>
+          {
+            users.map(
+              user => (
+                <li key={user.id}>{user.title}</li>
+                /** key jest tutaj pobierany z const users id i przez funkcje map  */
+              )
+            )
+          }
+        </ul>
       </div>
     );
   }
