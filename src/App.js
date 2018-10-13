@@ -28,16 +28,14 @@ class App extends Component {
   }
 
   toggleTaskImportant = taskId => {
-    this.setState(
-      state => ({
-      tasks: state.tasks.map(
+    this.setState({
+      tasks: this.state.tasks.map(
         task => taskId !== task.id ? task : {
           ...task,
           isImportant: !task.isImportant
         }
       )
     })
-    )
   }
 
   // toggleTaskUnimportant = taskId => {
@@ -52,15 +50,14 @@ class App extends Component {
   // }
 
   toggleTaskDone = taskId => {
-    this.setState(
-      state => ({
-      tasks: state.tasks.map(
+    this.setState({
+      tasks: this.state.tasks.map(
         task => taskId !== task.id ? task : {
           ...task,
           isDone: !task.isDone
         }
       )
-    }))
+    })
   }
 
   render() {
@@ -72,15 +69,16 @@ class App extends Component {
           {
             this.state.tasks.map(
               task => (
-                <li key={task.id} onClick={() => this.toggleTaskDone(task.id)}>
+                <li key={task.id}>
                   {
                     task.isImportant ?
-                      <span onClick={(event) => { event.stopPropagation(); this.toggleTaskImportant(task.id) }}>&#9733;</span> :
-                      <span onClick={(event) => { event.stopPropagation(); this.toggleTaskImportant(task.id) }}>&#9734;</span>
+                      <span onClick={() => this.toggleTaskImportant(task.id) }>&#9733;</span> :
+                      <span onClick={() => this.toggleTaskImportant(task.id) }>&#9734;</span>
                   }
                   {
                     task.isDone ? <del>{task.title}</del> : task.title
                   }
+                  <button onClick={() => this.toggleTaskDone(task.id)}>toggle done</button>
                 </li>
               )
             )
