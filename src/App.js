@@ -11,7 +11,7 @@ const users = [
   {
     id: 2,
     title: 'User 2',
-    isDone: false,
+    isDone: true,
     isImportant: false
   },
   {
@@ -28,18 +28,15 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Menu</h1>
-        {
-          [<div key="foo">foo</div>, <p key="blah">Blah</p>]
-        }
-        {
-          [<div key="foo">foo</div>, <p key="blah">Blah</p>]          
-        }
         <ul>
           {
             users.map(
               user => (
-                <li key={user.id}>{user.title}</li>
-                /** key jest tutaj pobierany z const users id i przez funkcje map  */
+                <li key={user.id}>
+                {
+                  user.isDone ? <del>[user.title]</del> : user.title
+                }
+                </li>
               )
             )
           }
