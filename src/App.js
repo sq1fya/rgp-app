@@ -27,17 +27,42 @@ state = {
   ]
 }
 
+makeTaskImportant = taskId => {
+  this.setState({
+    tasks: this.state.tasks.map(
+      task => taskId !== task.id ? task : {
+        ...task,
+        isImportant: true
+      }
+    )
+  })
+}
+
+makeTaskUnimportant = taskId => {
+  this.setState({
+    tasks: this.state.tasks.map(
+      task => taskId !== task.id ? task : {
+        ...task,
+        isImportant: false
+      }
+    )
+  })
+}
+
   render() {
     return (
       <div className="App">
         <h1>Menu</h1>
+        
         <ul>
           {
             this.state.tasks.map(
               task => (
                 <li key={task.id}>
                   {
-                    task.isImportant ? <span>&#9734;</span> : <span>&#9733;</span>
+                    task.isImportant ?
+                     <span onClick={() => this.makeTaskUnimportant(task.id)}>&#9733;</span> : 
+                     <span onClick={() => this.makeTaskImportant(task.id)}>&#9734;</span>
                   }
                   {
                     task.isDone ? <del>{task.title}</del> : task.title
