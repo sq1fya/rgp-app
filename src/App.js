@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import AddTaskForm from './components/AddTaskForm/AddTaskForm'
 import './App.css'
 
 class App extends Component {
@@ -63,7 +64,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Menu</h1>
-
+        <AddTaskForm/>
         <ul>
           {
             this.state.tasks.map(
