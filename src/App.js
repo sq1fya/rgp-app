@@ -18,7 +18,7 @@ const users = [
     id: 3,
     title: 'User 3',
     isDone: false,
-    isImportant: false
+    isImportant: true
   }
 ]
 
@@ -33,6 +33,9 @@ class App extends Component {
             users.map(
               user => (
                 <li key={user.id}>
+                {
+                  user.isImportant && <span>&#9734;</span>
+                }
                 {
                   user.isDone ? <del>[user.title]</del> : user.title
                 }
