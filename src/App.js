@@ -4,6 +4,8 @@ import './App.css'
 
 class App extends Component {
 
+
+
   state = {
 
     tasks: [
@@ -64,7 +66,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Menu</h1>
-        <AddTaskForm/>
+        <AddTaskForm />
         <ul>
           {
             this.state.tasks.map(
