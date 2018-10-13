@@ -28,6 +28,12 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Menu</h1>
+        {
+          [<div key="foo">foo</div>, <p key="blah">Blah</p>]
+        }
+        {
+          [<div key="foo">foo</div>, <p key="blah">Blah</p>]          
+        }
         <ul>
           {
             users.map(
