@@ -1,4 +1,4 @@
-const usersApiUrl = "https://retrogameparty-fb.firebaseio.com/";
+const usersApiUrl = "https://jfddl2-dc5eb.firebaseio.com";
 
 export const getUsers = () =>
   fetch(usersApiUrl + "/users.json")

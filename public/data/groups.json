@@ -1,0 +1,162 @@
+{
+  "-LOUwT2LrE4Ad_othCKg": {
+    "name": "Konklab",
+    "studentIds": [
+      19,
+      14,
+      2,
+      20,
+      1,
+      3
+    ],
+    "city": "Gdynia",
+    "level": "beginner"
+  },
+  "-LOUwT2P9XbHjpfjjWL6": {
+    "name": "Zaam-Dox",
+    "studentIds": [
+      12,
+      6,
+      19,
+      17,
+      3,
+      4,
+      13,
+      5,
+      18,
+      8
+    ],
+    "city": "Gdańsk",
+    "level": "intermediate"
+  },
+  "-LOUwT2UEwoxZa-J-UfQ": {
+    "name": "Tampflex",
+    "studentIds": [
+      2,
+      20,
+      9,
+      14,
+      3,
+      19,
+      16,
+      11,
+      8,
+      18,
+      15,
+      4,
+      12
+    ],
+    "city": "Gdańsk",
+    "level": "advanced"
+  },
+  "-LOUwT2Y82kaMtPyvFDq": {
+    "name": "Tin",
+    "studentIds": [
+      14,
+      3,
+      20,
+      7,
+      11,
+      8,
+      9
+    ],
+    "city": "Sopot",
+    "level": "beginner"
+  },
+  "-LOUwT2d_MGhxsDTKbf-": {
+    "name": "Namfix",
+    "studentIds": [
+      2,
+      9,
+      4,
+      19,
+      3,
+      7,
+      1,
+      13,
+      8,
+      11,
+      16,
+      12,
+      15
+    ],
+    "city": "Gdańsk",
+    "level": "beginner"
+  },
+  "-LOUwT2f9IP6Fl5mhQn9": {
+    "name": "Latlux",
+    "studentIds": [
+      16,
+      1,
+      8
+    ],
+    "city": "Sopot",
+    "level": "advanced"
+  },
+  "-LOUwT2inVlU_3p0j_Ai": {
+    "name": "Y-find",
+    "studentIds": [
+      18,
+      3,
+      8,
+      7,
+      13,
+      1
+    ],
+    "city": "Sopot",
+    "level": "advanced"
+  },
+  "-LOUwT2kfJtCB50zY-1b": {
+    "name": "Y-find",
+    "studentIds": [
+      4,
+      14,
+      1,
+      2,
+      15,
+      9
+    ],
+    "city": "Gdańsk",
+    "level": "beginner"
+  },
+  "-LOUwT2quP3hAAynUp93": {
+    "name": "Voyatouch",
+    "studentIds": [
+      8,
+      11,
+      14,
+      15,
+      6,
+      19,
+      13,
+      9,
+      12,
+      20,
+      10,
+      1,
+      3
+    ],
+    "city": "Gdańsk",
+    "level": "advanced"
+  },
+  "-LOUwT2vFrcBijyzA9NT": {
+    "name": "Ronstring",
+    "studentIds": [
+      11,
+      16,
+      15,
+      4,
+      17,
+      8,
+      20,
+      9,
+      5,
+      13,
+      6,
+      12,
+      19
+    ],
+    "city": "Gdańsk",
+    "level": "advanced"
+  }
+}
