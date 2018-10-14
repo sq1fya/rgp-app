@@ -37,7 +37,7 @@ class FirebaseView extends Component {
   render() {
     return (
       <div className="FirebaseView">
-        <h1>FirebaseView</h1>
+        <h1>Player base</h1>
         <form onSubmit={this.handleSubmit}>
           <input
             placeholder="name"
@@ -51,7 +51,7 @@ class FirebaseView extends Component {
           />
           <button>Add</button>
         </form>
-
+        <p>List of player in Retro Game Party base :</p>
         <ul>
           {this.state.users.map(user => (
             <li key={user.id}>
