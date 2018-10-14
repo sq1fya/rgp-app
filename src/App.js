@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import AddTaskForm from '../src/components/AddTaskForm/AddTaskForm';
+// import AddNameForm from '../src/components/AddNameForm/AddNameForm';
 import './App.css'
 
 class App extends Component {
@@ -58,6 +59,18 @@ class App extends Component {
     })
   }
 
+  addName = name => {
+    this.setState({
+      previousState: this.state,
+      tasks: this.state.tasks.concat({
+        id: Date.now(),
+        name: name,
+        isDone: false,
+        isImportant: false
+      })
+    })
+  }
+
   componentDidUpdate() {
     localStorage.setItem('tasks', JSON.stringify(this.state.tasks))
   }
@@ -66,8 +79,10 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Awesome ToDo</h1>
-        <AddTaskForm addTaskFunction={this.addTask} />
-        <button onClick={this.handleUndo}>Undo</button>
+        <div>
+          <AddTaskForm addTaskFunction={this.addTask & this.addName} />
+          <button onClick={this.handleUndo}>Undo</button>
+        </div>
         <ul>
           {
             this.state.tasks.map(
