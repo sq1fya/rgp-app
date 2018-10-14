@@ -1,37 +1,17 @@
 import React, { Component } from 'react'
-import AddTaskForm from './components/AddTaskForm/AddTaskForm'
+import AddTaskForm from '../src/components/AddTaskForm/AddTaskForm';
 import './App.css'
 
 class App extends Component {
 
-
-
   state = {
-
-    tasks: [
-      {
-        id: 1,
-        title: 'User 1',
-        isDone: false,
-        isImportant: false
-      },
-      {
-        id: 2,
-        title: 'User 2',
-        isDone: true,
-        isImportant: false
-      },
-      {
-        id: 3,
-        title: 'User 3',
-        isDone: false,
-        isImportant: true
-      }
-    ]
+    tasks: JSON.parse(localStorage.getItem('tasks') || '[]'),
+    previousState: null
   }
 
   toggleTaskImportant = taskId => {
     this.setState({
+      previousState: this.state,
       tasks: this.state.tasks.map(
         task => taskId !== task.id ? task : {
           ...task,
@@ -41,9 +21,9 @@ class App extends Component {
     })
   }
 
-
   toggleTaskDone = taskId => {
     this.setState({
+      previousState: this.state,
       tasks: this.state.tasks.map(
         task => taskId !== task.id ? task : {
           ...task,
@@ -53,20 +33,41 @@ class App extends Component {
     })
   }
 
-
   removeTask = taskId => {
     this.setState({
+      previousState: this.state,
       tasks: this.state.tasks.filter(
         task => taskId !== task.id
       )
     })
   }
 
+  handleUndo = () => {
+    this.setState(this.state.previousState)
+  }
+
+  addTask = title => {
+    this.setState({
+      previousState: this.state,
+      tasks: this.state.tasks.concat({
+        id: Date.now(),
+        title: title,
+        isDone: false,
+        isImportant: false
+      })
+    })
+  }
+
+  componentDidUpdate() {
+    localStorage.setItem('tasks', JSON.stringify(this.state.tasks))
+  }
+
   render() {
     return (
       <div className="App">
-        <h1>Menu</h1>
-        <AddTaskForm />
+        <h1>Awesome ToDo</h1>
+        <AddTaskForm addTaskFunction={this.addTask} />
+        <button onClick={this.handleUndo}>Undo</button>
         <ul>
           {
             this.state.tasks.map(
@@ -88,8 +89,8 @@ class App extends Component {
           }
         </ul>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
