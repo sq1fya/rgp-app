@@ -1,13 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-
-// import TodoView from "../TodoView/TodoView";
-// import EmployeesView from "../EmployeesView/EmployeesView";
-// import EmployeeView from "../EmployeeView/EmployeeView";
-// import GridView from "../GridView/GridView";
-
-// import StudentsView from "../StudentsView";
-// import GroupsView from '../GroupsView';
+import LoginView from '../LoginView/LoginView'
 
 import FirebaseView from '../FirebaseView/FirebaseView';
 
@@ -25,6 +18,9 @@ class App extends Component {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/enter">Log in / Create pass</NavLink>
+            </li>
+            <li>
               <NavLink to="/firebase">Add player data</NavLink>
             </li>
           </ul>
@@ -39,6 +35,7 @@ class App extends Component {
             </div>
           } />
           <Route path="/firebase" component={FirebaseView} />
+          <Route path="/enter" component={LoginView} />
         </div>
       </Router>
     );

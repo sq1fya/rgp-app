@@ -54,7 +54,7 @@ class FirebaseView extends Component {
             onChange={this.handleSurnameChange}
           />
           <input
-            placeholder="point"
+            placeholder="start point"
             value={this.state.point}
             onChange={this.handlePointChange}
           />
