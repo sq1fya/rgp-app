@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getUsers, addUser, deleteUser, addPoint } from "../../services/users";
+import { getUsers, addUser, deleteUser, addPoint, deletePoint } from "../../services/users";
 
 import "./FirebaseView.css";
 
@@ -68,7 +68,8 @@ class FirebaseView extends Component {
               <button onClick={() => deleteUser(user.id).then(this.getUsers)}>
                 delete
               </button>
-              <button onClick={() => addPoint(user.id, user.point + 1).then(this.getUsers)} > Add point</button>
+              <button onClick={() => addPoint(user.id, user.point + 1).then(this.getUsers)} > + 1</button>
+              <button onClick={() => deletePoint(user.id, user.point -1).then(this.getUsers)} > - 1</button>
             </li>
             
           ))}
