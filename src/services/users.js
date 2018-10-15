@@ -16,7 +16,7 @@ export const addUser = (name, surname, point) =>
     body: JSON.stringify({
       name,
       surname,
-      point
+      point:parseInt(point)
     }),
     headers: {
       "Content-Type": "application/json"
@@ -31,13 +31,11 @@ export const deleteUser = userId =>
     }
   });
   
-  export const addPoint = (point, name, surname)=>
-  fetch(usersApiUrl + "/users/" + point + ".json", {
-    method: "PUT",
+  export const addPoint = (userId, point)=>
+  fetch(usersApiUrl + "/users/" + userId + ".json", {
+    method: "PATCH",
     body: JSON.stringify({
-      point: 9,
-      name: name,
-      surname: surname
+      point
     }),
     headers: {
       "Content-Type": "application/json"

@@ -68,7 +68,7 @@ class FirebaseView extends Component {
               <button onClick={() => deleteUser(user.id).then(this.getUsers)}>
                 delete
               </button>
-              <button onClick={() => addPoint(user.id, user.name, user.surname).then(this.getUsers)} > Add point</button>
+              <button onClick={() => addPoint(user.id, user.point + 1).then(this.getUsers)} > Add point</button>
             </li>
             
           ))}
