@@ -7,7 +7,7 @@ class LoginView extends Component {
   render() {
     return  (
       <div className="LoginView">
-        LoginView
+        LoginView in this place input come
       </div>
     )
   }

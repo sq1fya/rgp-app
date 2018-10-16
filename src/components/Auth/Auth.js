@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-
+// import PropTypes from 'prop-types'
+import LoginView from "../LoginView"
 import './Auth.css'
 
 class Auth extends Component {
   state = {
-    user: {} 
+    user: null
     // null albo {}
   }
 
@@ -14,7 +14,7 @@ class Auth extends Component {
       <div className="Auth">
         {
           this.state.user ? this.props.children : <>
-            Formularze
+            <LoginView />
           </>
         }
       </div>
