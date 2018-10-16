@@ -5,11 +5,11 @@ import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
 import './setupFirebase'
 
-import firebase from 'firebase'
+// import firebase from 'firebase'
 
 import Auth from './components/Auth/Auth';
 
-firebase.auth().createUserWithEmailAndPassword('lukasz.bladeaaaa@gmail.com', 'qwerty123')
+// firebase.auth().createUserWithEmailAndPassword('lukasz.bladeaaaa@gmail.com', 'qwerty123')
 
 
 ReactDOM.render(<Auth><App /></Auth>, document.getElementById('root'));
