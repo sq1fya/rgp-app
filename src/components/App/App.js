@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import LoginView from "../LoginView/LoginView";
-import Login from "../Login/Login";
 import FirebaseView from "../FirebaseView/FirebaseView";
 
 import "./App.css";

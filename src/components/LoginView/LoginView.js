@@ -8,7 +8,7 @@ class LoginView extends Component {
   render() {
     return  (
       <div className="LoginView">
-        LoginView in this place input come
+        Enter Login to start use App
         <SignUpForm />
       </div>
     )
