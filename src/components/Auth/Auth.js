@@ -5,7 +5,7 @@ import './Auth.css'
 
 class Auth extends Component {
   state = {
-    user: null 
+    user: {} 
     // null albo {}
   }
 

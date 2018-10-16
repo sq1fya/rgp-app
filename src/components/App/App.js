@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import LoginView from "../LoginView/LoginView";
 import Login from "../Login/Login";
-import Createuser from "../Createuser/Createuser";
 import FirebaseView from "../FirebaseView/FirebaseView";
 
 import "./App.css";
@@ -19,22 +18,16 @@ class App extends Component {
               </NavLink>
             </li>
             <li>
-              <NavLink to="enter">ENTER THE MATRIX</NavLink>
-            </li>
-            <li>
-              <NavLink to="login" >
-              login
+              <NavLink to="loginview" >
+                login view
               </NavLink>
-            </li>
-            <li>
-              <NavLink to="createuser" >
-              create user</NavLink>
             </li>
             <li>
               <NavLink to="/firebase">Add player data</NavLink>
             </li>
           </ul>
 
+          <Route path="/loginview" component={LoginView} />
           <Route
             exact
             path="/"
@@ -54,11 +47,6 @@ class App extends Component {
             )}
           />
           <Route path="/firebase" component={FirebaseView} />
-          <Route exact path="/enter" component={LoginView} />
-          <switch>
-          <Route path="/login" component={Login} />
-          <Route path="/createuser" component={Createuser} />
-          </switch>
         </div>
       </Router>
     );
