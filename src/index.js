@@ -9,6 +9,8 @@ import firebase from 'firebase'
 
 import Auth from './components/Auth/Auth';
 
+firebase.auth().createUserWithEmailAndPassword('lukasz.bladeaaaa@gmail.com', 'qwerty123')
+
 ReactDOM.render(<Auth><App /></Auth>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
