@@ -12,8 +12,9 @@ class App extends Component {
     return (
       <Router>
         <div className="App" >
+         You are logged in on email: <b>
+        {firebase.auth().currentUser && firebase.auth().currentUser.email}</b>
         <button onClick={() => firebase.auth().signOut()} >Log Out</button>
-        <div>{firebase.auth.EmailAuthProvider.getEmail}</div>
           <ul>
             <li>
               <NavLink exact to="/">
