@@ -1,3 +1,9 @@
 .Auth {
-  
+  display: flex;
+  justify-content: center;
+  /* background-color: grey; */
+}
+.AuthPicBox {
+  height: 50px;
+  background-color: gray;
 }

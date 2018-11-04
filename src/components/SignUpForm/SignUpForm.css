@@ -1,0 +1,15 @@
+input {
+    border-radius: 15px;
+    padding: 10px;
+    margin-right: 10px;
+    
+}
+.SignUpForm {
+
+}
+button {
+    border-radius: 15px;
+    padding: 8px;
+    background-color: transparent;
+    margin-right: 10px;
+}

@@ -1,3 +1,9 @@
 .LoginView {
-  
+  padding: 20px;
+}
+.SignUpLabel {
+    margin: 10px;
+}
+.SignInLabel {
+    padding: 10px;
 }

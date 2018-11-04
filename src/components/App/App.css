@@ -1,10 +1,52 @@
 .App {
-  width: 80%;
+  display: flex;
+  width: 100%;
   margin: 20px auto;
   padding: 20px;
-  box-shadow: 0 5px 10px gray;
+  justify-content: space-between;
+  /* box-shadow: 0 5px 10px gray; */
+  /* text-decoration: none; */
 }
-
+.LeftBox {
+  width: 20%;
+}
+.RightBox {
+  width: 90%;
+}
+.LogOutBox {
+  display: flex;
+  justify-content: space-between;
+}
+.LogOutBoxTxt {
+  background-color: gainsboro;
+  opacity: 0.5;
+  padding: 10px;
+  border-radius: 15px;
+  align-self: center;
+}
+.LogOutBoxButton :hover {
+  color: red;
+}
+.LogOutButton {
+  background-color: black;
+  color: white;
+}
+.MenuNavLiBox {
+}
 .App .active {
   font-weight: bold;
+}
+#NavLi :hover {
+  color: gray;
+}
+#NavLi {
+  /* font-size: 30px; */
+}
+a,
+ul {
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+}
+.HomeBox {
 }

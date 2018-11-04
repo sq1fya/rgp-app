@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import firebase from "firebase"
+import "./SignUpForm.css"
 
 class SignUpForm extends Component {
 
@@ -26,6 +27,7 @@ class SignUpForm extends Component {
         return (
             <form onSubmit={this.handleSubmit} className="SignUpForm">
                 <input
+                    id="inp"
                     placeholder="Enter email"
                     name="email"
                     value={this.state.email}
@@ -33,6 +35,7 @@ class SignUpForm extends Component {
                 />
 
                 <input
+                    id="inp"
                     placeholder="Enter password"
                     name="password"
                     value={this.state.password}
