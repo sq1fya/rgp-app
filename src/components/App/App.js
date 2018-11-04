@@ -2,19 +2,25 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import LoginView from "../LoginView/LoginView";
 import FirebaseView from "../FirebaseView/FirebaseView";
-import firebase from 'firebase'
+import firebase from "firebase";
 
 import "./App.css";
-
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App" >
-         You are logged in on email: <b>
-        {firebase.auth().currentUser && firebase.auth().currentUser.email}</b>
-        <button onClick={() => firebase.auth().signOut()} >Log Out</button>
+        <div className="LogOutBox">
+          <div className="App">
+            You are logged in on email:{" "}
+            <strong>
+              {firebase.auth().currentUser && firebase.auth().currentUser.email}
+            </strong>
+            <div className="LogOutButton">
+            <button onClick={() => firebase.auth().signOut()}>Log Out</button>
+          </div>
+          </div>
+          
           <ul>
             <li id="NavLi">
               <NavLink exact to="/">
@@ -30,7 +36,6 @@ class App extends Component {
               <NavLink to="/firebase">Add player data</NavLink>
             </li>
           </ul>
-
           <Route path="/loginview" component={LoginView} />
           <Route
             exact

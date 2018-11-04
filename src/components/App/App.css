@@ -1,8 +1,13 @@
+.LogOutBox {
+}
+.LogOutButton {
+  
+}
 .App {
   width: 80%;
   margin: 20px auto;
   padding: 20px;
-  box-shadow: 0 5px 10px gray;
+  /* box-shadow: 0 5px 10px gray; */
   text-decoration: none;
 
 }
