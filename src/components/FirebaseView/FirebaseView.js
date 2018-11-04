@@ -64,7 +64,7 @@ class FirebaseView extends Component {
         <ul>
           {this.state.users.map(user => (
             <li key={user.id}>
-              {user.name} {user.surname} {user.point}
+              {user.name} {user.surname} {user.point} {users{tournaments}}
               <button onClick={() => deleteUser(user.id).then(this.getUsers)}>
                 delete
               </button>

@@ -16,7 +16,7 @@ export const addUser = (name, surname, point) =>
     body: JSON.stringify({
       name,
       surname,
-      point:parseInt(point)
+      point:parseInt(point),
     }),
     headers: {
       "Content-Type": "application/json"
