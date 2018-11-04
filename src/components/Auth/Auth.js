@@ -1,0 +1,29 @@
+import React, { Component } from 'react'
+// import PropTypes from 'prop-types'
+import LoginView from "../LoginView"
+import './Auth.css'
+import firebase from 'firebase'
+
+class Auth extends Component {
+  state = {
+    user: null
+    // null albo {}
+  }
+componentDidMount() {
+  firebase.auth().onAuthStateChanged(user => this.setState({ user }))
+}
+  render() {
+    return  (
+      <div className="Auth">
+        {
+          this.state.user ? this.props.children :
+          <>
+            <LoginView />
+          </>
+        }
+      </div>
+    )
+  }
+}
+
+export default Auth
