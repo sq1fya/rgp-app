@@ -2,5 +2,31 @@
   
 }
 .TitleBox {
-    
+
+}
+.FormBox {
+
+}
+.TitleListBox {
+}
+
+.MainListBox {
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+}
+.MainListBoxFlex {
+    display: flex;
+    width: 80%;
+}
+.MainListBoxName {
+    /* display: flex; */
+    width: 55%;
+    justify-content: center;
+}
+.MainListBoxButtons {
+    display: flex;
+    justify-content: space-between;
+    /* width: 10%; */
+
 }

@@ -79,6 +79,7 @@ class FirebaseView extends Component {
           <ul>
             {this.state.users.map(user => (
               <li key={user.id}>
+                <div className="MainListBoxFlex">
                 <div className="MainListBoxName">
                   {user.name} {user.surname} {user.point}
                 </div>
@@ -104,6 +105,7 @@ class FirebaseView extends Component {
                     {" "}
                     - 1
                   </button>
+                </div>
                 </div>
               </li>
             ))}
