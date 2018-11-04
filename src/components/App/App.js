@@ -11,17 +11,8 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-        <div className="LogOutBox">
-        <div className="LogOutBoxTxt">
-          You are logged in on email:{" "}
-          <strong>
-            {firebase.auth().currentUser && firebase.auth().currentUser.email}
-          </strong>
-          </div>
-          <div className="LogOutBoxButton">
-          <button onClick={() => firebase.auth().signOut()}>Log Out</button>
-          </div>
-          </div>
+        <div className="LeftBox">
+        <div className="BoxMenu">
           <div className="MenuNavLiBox">
             <ul>
               <li id="NavLi">
@@ -39,6 +30,24 @@ class App extends Component {
               </li>
             </ul>
           </div>
+          </div>
+
+        </div>
+        <div className="RightBox">
+
+          <div className="LogOutBox">
+            <div className="LogOutBoxTxt">
+              You are logged in on email:{" "}
+              <strong>
+                {firebase.auth().currentUser &&
+                  firebase.auth().currentUser.email}
+              </strong>
+            </div>
+            <div className="LogOutBoxButton">
+              <button onClick={() => firebase.auth().signOut()}>Log Out</button>
+            </div>
+          </div>
+
           <Route path="/loginview" component={LoginView} />
           <Route
             exact
@@ -59,6 +68,10 @@ class App extends Component {
             )}
           />
           <Route path="/firebase" component={FirebaseView} />
+
+
+        </div>
+  
         </div>
       </Router>
     );

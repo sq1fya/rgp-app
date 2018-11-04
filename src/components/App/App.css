@@ -1,44 +1,45 @@
-
 .App {
-  /* display: flex;*/
-  /* width: 80%; */
+  display: flex;
+  width: 100%;
   margin: 20px auto;
-  /* padding: 20px; */
+  padding: 20px;
+  justify-content: space-between;
   /* box-shadow: 0 5px 10px gray; */
   /* text-decoration: none; */
 }
+.LeftBox {
+  width: 20%;
+}
+.RightBox {
+  width: 90%;
+}
 .LogOutBox {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* flex-wrap: wrap; */
-  /* justify-content: space-between; */
+  display: flex;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: gainsboro;
+  justify-content: space-between;
 }
 .LogOutBoxTxt {
-
 }
 .LogOutBoxButton {
-
 }
 .MenuNavLiBox {
-  /* justify-content: flex-start; */
 }
 .App .active {
   font-weight: bold;
-  box-shadow: 0 5px 10px transparent;
-  padding: 5px;
-  /* text-decoration: none; */
 }
 #NavLi :hover {
   color: gray;
 }
 #NavLi {
-  font-size: 30px;
+  /* font-size: 30px; */
 }
-a, ul {
+a,
+ul {
   text-decoration: none;
   list-style-type: none;
   color: black;
 }
-.HomeBox{
-
+.HomeBox {
 }
