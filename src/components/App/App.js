@@ -10,38 +10,41 @@ class App extends Component {
   render() {
     return (
       <Router>
+        <div className="App">
         <div className="LogOutBox">
-          <div className="App">
-            You are logged in on email:{" "}
-            <strong>
-              {firebase.auth().currentUser && firebase.auth().currentUser.email}
-            </strong>
-            <div className="LogOutButton">
-            <button onClick={() => firebase.auth().signOut()}>Log Out</button>
+        <div className="LogOutBoxTxt">
+          You are logged in on email:{" "}
+          <strong>
+            {firebase.auth().currentUser && firebase.auth().currentUser.email}
+          </strong>
+          </div>
+          <div className="LogOutBoxButton">
+          <button onClick={() => firebase.auth().signOut()}>Log Out</button>
           </div>
           </div>
-          
-          <ul>
-            <li id="NavLi">
-              <NavLink exact to="/">
-                Home
-              </NavLink>
-            </li>
-            {/* <li id="NavLi">
+          <div className="MenuNavLiBox">
+            <ul>
+              <li id="NavLi">
+                <NavLink exact to="/">
+                  Home
+                </NavLink>
+              </li>
+              {/* <li id="NavLi">
               <NavLink to="loginview" >
                 login view
               </NavLink>
             </li> */}
-            <li id="NavLi">
-              <NavLink to="/firebase">Add player data</NavLink>
-            </li>
-          </ul>
+              <li id="NavLi">
+                <NavLink to="/firebase">Add player data</NavLink>
+              </li>
+            </ul>
+          </div>
           <Route path="/loginview" component={LoginView} />
           <Route
             exact
             path="/"
             component={() => (
-              <div>
+              <div className="HomeBox">
                 <h1>Retro Game Party Tournament App</h1>
                 <div>
                   This app will be developed in order to learn about the

@@ -1,17 +1,27 @@
-.LogOutBox {
-}
-.LogOutButton {
-  
-}
+
 .App {
-  width: 80%;
+  /* display: flex;*/
+  /* width: 80%; */
   margin: 20px auto;
-  padding: 20px;
+  /* padding: 20px; */
   /* box-shadow: 0 5px 10px gray; */
-  text-decoration: none;
+  /* text-decoration: none; */
+}
+.LogOutBox {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
+}
+.LogOutBoxTxt {
 
 }
+.LogOutBoxButton {
 
+}
+.MenuNavLiBox {
+  /* justify-content: flex-start; */
+}
 .App .active {
   font-weight: bold;
   box-shadow: 0 5px 10px transparent;
@@ -26,5 +36,9 @@
 }
 a, ul {
   text-decoration: none;
+  list-style-type: none;
   color: black;
+}
+.HomeBox{
+
 }
