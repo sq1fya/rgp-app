@@ -15,14 +15,21 @@
 }
 .LogOutBox {
   display: flex;
-  padding: 10px;
-  border-radius: 15px;
-  background-color: gainsboro;
   justify-content: space-between;
 }
 .LogOutBoxTxt {
+  background-color: gainsboro;
+  opacity: 0.5;
+  padding: 10px;
+  border-radius: 15px;
+  align-self: center;
 }
-.LogOutBoxButton {
+.LogOutBoxButton :hover {
+  color: red;
+}
+.LogOutButton {
+  background-color: black;
+  color: white;
 }
 .MenuNavLiBox {
 }

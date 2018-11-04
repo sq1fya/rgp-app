@@ -44,7 +44,7 @@ class App extends Component {
               </strong>
             </div>
             <div className="LogOutBoxButton">
-              <button onClick={() => firebase.auth().signOut()}>Log Out</button>
+              <button className="LogOutButton" onClick={() => firebase.auth().signOut()}>Log Out</button>
             </div>
           </div>
 
