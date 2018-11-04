@@ -1,21 +1,24 @@
-import React, { Component } from 'react'
-import SignUpForm from "../SignUpForm/SignUpForm"
-import SignInForm from "../SignInForm/SignInForm"
+import React, { Component } from "react";
+import SignUpForm from "../SignUpForm/SignUpForm";
+import SignInForm from "../SignInForm/SignInForm";
 
-import './LoginView.css'
+import "./LoginView.css";
 
 class LoginView extends Component {
-
   render() {
-    return  (
+    return (
       <div className="LoginView">
-        Enter Login to start use App
+        <label className="SignUpLabel">
+          Register first. Enter login and pass to create Your acount
+        </label>
         <SignUpForm />
-        Sign In to Login
+        <label className="SignInLabel">
+          Sign in App
+        </label>
         <SignInForm />
       </div>
-    )
+    );
   }
 }
 
-export default LoginView
+export default LoginView;

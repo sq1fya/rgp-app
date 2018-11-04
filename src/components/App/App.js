@@ -16,17 +16,17 @@ class App extends Component {
         {firebase.auth().currentUser && firebase.auth().currentUser.email}</b>
         <button onClick={() => firebase.auth().signOut()} >Log Out</button>
           <ul>
-            <li>
+            <li id="NavLi">
               <NavLink exact to="/">
                 Home
               </NavLink>
             </li>
-            <li>
+            {/* <li id="NavLi">
               <NavLink to="loginview" >
                 login view
               </NavLink>
-            </li>
-            <li>
+            </li> */}
+            <li id="NavLi">
               <NavLink to="/firebase">Add player data</NavLink>
             </li>
           </ul>

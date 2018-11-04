@@ -3,8 +3,23 @@
   margin: 20px auto;
   padding: 20px;
   box-shadow: 0 5px 10px gray;
+  text-decoration: none;
+
 }
 
 .App .active {
   font-weight: bold;
+  box-shadow: 0 5px 10px transparent;
+  padding: 5px;
+  /* text-decoration: none; */
+}
+#NavLi :hover {
+  color: gray;
+}
+#NavLi {
+  font-size: 30px;
+}
+a, ul {
+  text-decoration: none;
+  color: black;
 }
