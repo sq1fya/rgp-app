@@ -1,3 +1,4 @@
 .Auth {
-  
+  display: flex;
+  justify-content: center;
 }
