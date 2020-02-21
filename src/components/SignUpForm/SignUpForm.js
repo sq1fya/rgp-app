@@ -1,12 +1,12 @@
 import React, { Component } from "react"
-import firebase from "firebase"
+import firebase from "firebase/app"
 import "./SignUpForm.css"
 
 class SignUpForm extends Component {
 
     state = {
         email: "",
-        password: ""
+        password: "",
     }
 
     handleChange = event => {
@@ -19,7 +19,7 @@ class SignUpForm extends Component {
         event.preventDefault()
         firebase.auth().createUserWithEmailAndPassword(
             this.state.email,
-            this.state.password
+            this.state.password,
         )
     }
 
@@ -30,22 +30,22 @@ class SignUpForm extends Component {
                     id="inp"
                     placeholder="Enter email"
                     name="email"
+                    type="email"
                     value={this.state.email}
                     onChange={this.handleChange}
                 />
-
                 <input
                     id="inp"
                     placeholder="Enter password"
                     name="password"
+                    type="password"
                     value={this.state.password}
                     onChange={this.handleChange}
                 />
-
                 <button>Sign up</button>
             </form>
         )
     }
 }
 
-export default SignUpForm 
+export default SignUpForm

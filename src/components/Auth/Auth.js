@@ -2,7 +2,8 @@ import React, { Component } from "react";
 // import PropTypes from 'prop-types'
 import LoginView from "../LoginView";
 import "./Auth.css";
-import firebase from "firebase";
+import firebase from "firebase/app";
+import 'firebase/auth'
 
 class Auth extends Component {
   state = {

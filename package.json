@@ -28,6 +28,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "prettier": "1.19.1",
     "react-styleguidist": "^7.3.10"
   }
 }

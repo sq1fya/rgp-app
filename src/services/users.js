@@ -30,25 +30,25 @@ export const deleteUser = userId =>
       "Content-Type": "application/json"
     }
   });
-  
-  export const addPoint = (userId, point)=>
-  fetch(usersApiUrl + "/users/" + userId + ".json", {
-    method: "PATCH",
-    body: JSON.stringify({
-      point
-    }),
-    headers: {
-      "Content-Type": "application/json"
-    }
-  });
 
-  export const deletePoint = (userId, point)=>
-  fetch(usersApiUrl + "/users/" + userId + ".json", {
-    method: "PATCH",
-    body: JSON.stringify({
-      point
-    }),
-    headers: {
-      "Content-Type": "application/json"
-    }
-  });
+export const addPoint = (userId, point)=>
+fetch(usersApiUrl + "/users/" + userId + ".json", {
+  method: "PATCH",
+  body: JSON.stringify({
+    point
+  }),
+  headers: {
+    "Content-Type": "application/json"
+  }
+});
+
+export const deletePoint = (userId, point)=>
+fetch(usersApiUrl + "/users/" + userId + ".json", {
+  method: "PATCH",
+  body: JSON.stringify({
+    point
+  }),
+  headers: {
+    "Content-Type": "application/json"
+  }
+});
